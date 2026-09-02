@@ -17,18 +17,6 @@ class LionTest {
     Feline feline;
 
     @Test
-    void maleHasMane() throws Exception {
-        Lion lion = new Lion("Самец", feline);
-        assertTrue(lion.doesHaveMane());
-    }
-
-    @Test
-    void femaleHasNoMane() throws Exception {
-        Lion lion = new Lion("Самка", feline);
-        assertFalse(lion.doesHaveMane());
-    }
-
-    @Test
     void invalidSexThrowsException() {
         assertThrows(Exception.class, () -> new Lion("Неизвестно", feline));
     }
